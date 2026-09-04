@@ -5,6 +5,9 @@
 @import "./tokens/motion.css";
 @import "./tokens/layout.css";
 @import "./tokens/effects.css";
+@import "./tokens/typography.css";
+@import "./tokens/status.css";
+@import "./tokens/controls.css";
 
 /*
  * Responsive vocabulary for V1:

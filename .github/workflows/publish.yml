@@ -41,6 +41,20 @@ jobs:
         run: node -e 'const p=require("./package.json"); if(p.version !== process.env.APPROVED_VERSION) throw new Error("Approved version must match package.json");'
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
+      - name: Refuse an already published version
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          APPROVED_VERSION: ${{ inputs.version }}
+        run: |
+          gh api --paginate --slurp /orgs/Mosaique-Evenements-Inc/packages/npm/ui/versions > "$RUNNER_TEMP/ui-versions.json"
+          node --input-type=module -e '
+            import { readFileSync } from "node:fs";
+            const pages = JSON.parse(readFileSync(`${process.env.RUNNER_TEMP}/ui-versions.json`, "utf8"));
+            if (!Array.isArray(pages) || !pages.length || pages.some(page => !Array.isArray(page))) throw new Error("Invalid package history response");
+            const versions = pages.flat();
+            if (!versions.length || versions.some(version => typeof version.name !== "string")) throw new Error("Cannot establish existing package history");
+            if (versions.some(version => version.name === process.env.APPROVED_VERSION)) throw new Error("Version already exists; never overwrite");
+          '
       - name: Pack validated source
         run: pnpm pack --pack-destination "$RUNNER_TEMP/ui-package" --json
       - name: Inspect archive

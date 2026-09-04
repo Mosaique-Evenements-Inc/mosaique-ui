@@ -1,0 +1,35 @@
+:root {
+  --primitive-font-sans:
+    Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --primitive-type-size-sm: 0.8125rem;
+  --primitive-type-size-md: 0.875rem;
+  --primitive-type-size-base: 1rem;
+  --primitive-type-weight-regular: 400;
+  --primitive-type-weight-medium: 500;
+  --primitive-type-leading-tight: 1.4;
+  --primitive-type-leading-normal: 1.5;
+  --primitive-type-leading-body: 1.6;
+  --primitive-type-tracking: 0;
+
+  --type-body-font-family: var(--primitive-font-sans);
+  --type-body-size: var(--primitive-type-size-base);
+  --type-body-weight: var(--primitive-type-weight-regular);
+  --type-body-line-height: var(--primitive-type-leading-body);
+  --type-body-letter-spacing: var(--primitive-type-tracking);
+  --type-label-font-family: var(--primitive-font-sans);
+  --type-label-size: var(--primitive-type-size-md);
+  --type-label-weight: var(--primitive-type-weight-medium);
+  --type-label-line-height: var(--primitive-type-leading-normal);
+  --type-label-letter-spacing: var(--primitive-type-tracking);
+  --type-caption-font-family: var(--primitive-font-sans);
+  --type-caption-size: var(--primitive-type-size-sm);
+  --type-caption-weight: var(--primitive-type-weight-medium);
+  --type-caption-line-height: var(--primitive-type-leading-tight);
+  --type-caption-letter-spacing: var(--primitive-type-tracking);
+  --type-control-font-family: var(--primitive-font-sans);
+  --type-control-size: var(--primitive-type-size-base);
+  --type-control-weight: var(--primitive-type-weight-medium);
+  --type-control-line-height: var(--primitive-type-leading-normal);
+  --type-control-letter-spacing: var(--primitive-type-tracking);
+}

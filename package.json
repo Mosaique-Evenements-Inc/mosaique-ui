@@ -1,6 +1,6 @@
 {
   "name": "@mosaique-evenements-inc/ui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Shared visual foundation for Mosaïque frontend applications",
   "private": false,
   "files": [
@@ -8,7 +8,8 @@
   ],
   "exports": {
     "./tokens.css": "./src/tokens.css",
-    "./foundation.css": "./src/foundation.css"
+    "./foundation.css": "./src/foundation.css",
+    "./recipes.css": "./src/recipes.css"
   },
   "sideEffects": [
     "**/*.css"

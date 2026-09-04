@@ -1,0 +1,14 @@
+:root {
+  --color-status-success-foreground: #285943;
+  --color-status-success-background: #edf4ef;
+  --color-status-success-border: #547963;
+  --color-status-warning-foreground: #71501d;
+  --color-status-warning-background: #faf2e2;
+  --color-status-warning-border: #92703e;
+  --color-status-error-foreground: #873c3c;
+  --color-status-error-background: #f8eded;
+  --color-status-error-border: #a45b5b;
+  --color-status-info-foreground: #36576b;
+  --color-status-info-background: #edf2f6;
+  --color-status-info-border: #607d90;
+}

@@ -1,0 +1,17 @@
+:root {
+  --control-compact-min-height: var(--space-10);
+  --control-compact-padding-inline: var(--space-3);
+  --control-compact-padding-block: var(--space-1);
+  --control-standard-min-height: var(--space-12);
+  --control-standard-padding-inline: var(--space-4);
+  --control-standard-padding-block: var(--space-2);
+  /* Existing Web single-line geometry; no new spacing-scale member. */
+  --control-comfortable-min-height: 3.75rem;
+  --control-comfortable-padding-inline: var(--space-6);
+  --control-comfortable-padding-block: var(--space-3);
+
+  --control-radius: var(--primitive-radius-sm);
+  --color-control-border: #74716b;
+  --color-control-disabled-foreground: #55524d;
+  --color-control-disabled-background: #eceae6;
+}

@@ -1,0 +1,66 @@
+@layer mosaique.recipes {
+  .mq-field {
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .mq-label {
+    font-family: var(--type-label-font-family);
+    font-size: var(--type-label-size);
+    font-weight: var(--type-label-weight);
+    line-height: var(--type-label-line-height);
+    letter-spacing: var(--type-label-letter-spacing);
+  }
+
+  .mq-help,
+  .mq-error {
+    margin: 0;
+    font-family: var(--type-caption-font-family);
+    font-size: var(--type-caption-size);
+    font-weight: var(--type-caption-weight);
+    line-height: var(--type-caption-line-height);
+    letter-spacing: var(--type-caption-letter-spacing);
+  }
+
+  .mq-help {
+    color: var(--color-text-secondary);
+  }
+
+  .mq-error {
+    color: var(--color-status-error-foreground);
+  }
+
+  .mq-input {
+    border: 1px solid var(--color-control-border);
+    border-radius: var(--control-radius);
+    background: var(--color-surface);
+    color: var(--color-text-primary);
+  }
+
+  .mq-input::placeholder {
+    color: var(--color-control-disabled-foreground);
+    opacity: 1;
+  }
+
+  .mq-input[readonly] {
+    background: var(--color-control-disabled-background);
+    border-style: dashed;
+  }
+
+  .mq-input[aria-invalid="true"] {
+    border-color: var(--color-status-error-border);
+    background: var(--color-status-error-background);
+  }
+
+  .mq-input:is(:disabled, [aria-disabled="true"]) {
+    background: var(--color-control-disabled-background);
+    color: var(--color-control-disabled-foreground);
+    border: 1px dashed var(--color-control-border);
+    opacity: 1;
+  }
+
+  .mq-textarea {
+    min-block-size: var(--space-32);
+    resize: vertical;
+  }
+}

@@ -1,0 +1,45 @@
+@layer mosaique.recipes {
+  .mq-control {
+    --mq-control-min-height: var(--control-standard-min-height);
+    --mq-control-padding-inline: var(--control-standard-padding-inline);
+    --mq-control-padding-block: var(--control-standard-padding-block);
+
+    box-sizing: border-box;
+    min-block-size: var(--mq-control-min-height);
+    padding: var(--mq-control-padding-block) var(--mq-control-padding-inline);
+    font-family: var(--type-control-font-family);
+    font-size: var(--type-control-size);
+    font-weight: var(--type-control-weight);
+    line-height: var(--type-control-line-height);
+    letter-spacing: var(--type-control-letter-spacing);
+    transition:
+      color var(--motion-duration-fast) var(--motion-easing-standard),
+      background-color var(--motion-duration-fast) var(--motion-easing-standard),
+      border-color var(--motion-duration-fast) var(--motion-easing-standard);
+  }
+
+  .mq-control[data-density="compact"] {
+    --mq-control-min-height: var(--control-compact-min-height);
+    --mq-control-padding-inline: var(--control-compact-padding-inline);
+    --mq-control-padding-block: var(--control-compact-padding-block);
+  }
+
+  .mq-control[data-density="comfortable"] {
+    --mq-control-min-height: var(--control-comfortable-min-height);
+    --mq-control-padding-inline: var(--control-comfortable-padding-inline);
+    --mq-control-padding-block: var(--control-comfortable-padding-block);
+  }
+
+  .mq-control:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+  }
+
+  .mq-control:is(:disabled, [aria-disabled="true"]) {
+    cursor: not-allowed;
+  }
+
+  .mq-control[aria-busy="true"] {
+    cursor: progress;
+  }
+}

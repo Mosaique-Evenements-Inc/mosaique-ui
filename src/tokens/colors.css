@@ -1,0 +1,63 @@
+:root {
+  --color-tan-500: #c49a6c;
+  --color-cream-100: #f6f1e8;
+  --color-gray-300: #c1c1c1;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-primary: var(--color-black);
+  --color-secondary: color-mix(
+    in oklab,
+    var(--color-primary) 72%,
+    var(--color-gray-300)
+  );
+  --color-muted: var(--color-gray-300);
+  --color-inverse: var(--color-cream-100);
+  --color-background: var(--color-cream-100);
+  --color-background-inverse: var(--color-primary);
+  --color-surface: var(--color-white);
+  --color-surface-elevated: color-mix(
+    in oklab,
+    var(--color-white) 84%,
+    var(--color-cream-100)
+  );
+  --color-surface-muted: color-mix(
+    in oklab,
+    var(--color-gray-300) 32%,
+    var(--color-cream-100)
+  );
+  --color-accent: var(--color-tan-500);
+  --color-accent-contrast: var(--color-primary);
+  --color-border-default: color-mix(
+    in oklab,
+    var(--color-primary) 22%,
+    transparent
+  );
+  --color-border-strong: color-mix(
+    in oklab,
+    var(--color-primary) 42%,
+    transparent
+  );
+  --color-overlay: color-mix(in srgb, var(--color-primary) 72%, transparent);
+
+  --color-text-primary: var(--color-primary);
+  --color-text-secondary: var(--color-secondary);
+  --color-text-inverse: var(--color-inverse);
+  --color-text-muted: var(--color-muted);
+  --color-border-subtle: var(--color-border-default);
+  --color-overlay-modal: var(--color-overlay);
+  --color-accent-muted: color-mix(
+    in oklab,
+    var(--color-accent) 24%,
+    var(--color-background)
+  );
+  --color-accent-text: color-mix(
+    in srgb,
+    var(--color-accent) 60%,
+    var(--color-primary)
+  );
+
+  --focus-ring-color: var(--color-accent-text);
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 3px;
+}

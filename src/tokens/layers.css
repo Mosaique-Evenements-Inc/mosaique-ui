@@ -1,0 +1,8 @@
+:root {
+  --primitive-z-base: 0;
+  --primitive-z-content: 10;
+  --primitive-z-sticky: 20;
+  --primitive-z-navigation: 40;
+  --primitive-z-overlay: 60;
+  --primitive-z-modal: 80;
+}

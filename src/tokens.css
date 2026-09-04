@@ -1,0 +1,16 @@
+@import "./tokens/colors.css";
+@import "./tokens/spacing.css";
+@import "./tokens/shape.css";
+@import "./tokens/layers.css";
+@import "./tokens/motion.css";
+@import "./tokens/layout.css";
+@import "./tokens/effects.css";
+
+/*
+ * Responsive vocabulary for V1:
+ * sm 40rem, md 48rem, lg 64rem, xl 80rem, 2xl 96rem.
+ *
+ * These values document the shared breakpoint contract. They are intentionally
+ * not exposed as runtime CSS custom properties because CSS variables cannot be
+ * used directly in standard @media queries.
+ */

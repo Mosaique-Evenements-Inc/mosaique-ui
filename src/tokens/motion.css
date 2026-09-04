@@ -1,0 +1,21 @@
+:root {
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --primitive-duration-fast: 160ms;
+  --primitive-duration-standard: 320ms;
+  --primitive-duration-slow: 640ms;
+
+  --motion-duration-fast: var(--primitive-duration-fast);
+  --motion-duration-standard: var(--primitive-duration-standard);
+  --motion-duration-slow: var(--primitive-duration-slow);
+
+  --motion-easing-standard: var(--ease-standard);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-duration-fast: 1ms;
+    --motion-duration-standard: 1ms;
+    --motion-duration-slow: 1ms;
+  }
+}

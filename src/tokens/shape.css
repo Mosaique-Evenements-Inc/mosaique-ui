@@ -1,0 +1,7 @@
+:root {
+  --primitive-radius-none: 0;
+  --primitive-radius-xs: 0.125rem;
+  --primitive-radius-sm: 0.25rem;
+  --primitive-radius-md: 0.5rem;
+  --primitive-radius-pill: 999rem;
+}

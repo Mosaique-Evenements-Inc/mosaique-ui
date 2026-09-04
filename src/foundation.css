@@ -1,0 +1,9 @@
+@import "./tokens.css";
+
+@layer mosaique.foundation {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
